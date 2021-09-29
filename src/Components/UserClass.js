@@ -17,7 +17,7 @@ class UserClass extends React.Component {
     //       });
     //   }
 
-    
+
 
     //using axios
     async getUsers() {
@@ -35,7 +35,11 @@ class UserClass extends React.Component {
         return (
             <>
               {this.state.users.map((user) => {
-          return <h1 key={user.id}>{user.name}</h1>;
+          return <>
+          <h1 key={user.id}>{user.name}</h1>
+          <h2 key={user.id}>{user.username}</h2>
+          <h3 key={user.id}>{user.email}</h3>
+          </> 
         })}
             </>
         )
